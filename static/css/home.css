@@ -1,147 +1,126 @@
+/* ================= THEME VARIABLES ================= */
+
+:root,
+[data-theme="light"]{
+--bg:#f4f7fb;
+--text:#1e293b;
+--card:#ffffff;
+--nav:#ffffff;
+--border:#e5e7eb;
+--primary:#2563eb;
+--primary-dark:#1d4ed8;
+--muted:#475569;
+}
+
+[data-theme="dark"]{
+--bg:#0b0e17;
+--text:#e2e8f0;
+--card:#111827;
+--nav:#111827;
+--border:#1f2937;
+--primary:#3b82f6;
+--primary-dark:#2563eb;
+--muted:#94a3b8;
+}
+
+/* ================= GLOBAL ================= */
+
 body{
 font-family:Inter, sans-serif;
-background:#f4f7fb;
+background:var(--bg);
+color:var(--text);
 margin:0;
+transition:background 0.3s ease,color 0.3s ease;
 }
 
-/* NAVBAR */
-
-.navbar{
-display:flex;
-justify-content:space-between;
-padding:20px 40px;
-background:white;
-border-bottom:1px solid #e5e7eb;
-}
-
-.menu a{
-margin-left:20px;
-text-decoration:none;
-color:#1e293b;
-font-weight:500;
-}
-
-/* HERO */
-
-.hero{
-text-align:center;
-padding:120px 20px;
-}
-
-.hero h1{
-font-size:40px;
-}
-
-.hero p{
-max-width:600px;
-margin:auto;
-margin-top:15px;
-color:#475569;
-}
-
-.btn{
-display:inline-block;
-margin-top:25px;
-background:#2563eb;
-color:white;
-padding:14px 28px;
-text-decoration:none;
-border-radius:6px;
-}
-
-/* FEATURES */
-
-.features{
-display:flex;
-justify-content:center;
-gap:30px;
-padding:80px 20px;
-}
-
-.card{
-background:white;
-padding:30px;
-width:260px;
-border-radius:10px;
-box-shadow:0 6px 15px rgba(0,0,0,0.06);
-text-align:center;
-}
-
-/* AQI SCALE */
-
-.aqi-scale{
-text-align:center;
-padding:60px 20px;
-}
-
-.scale-bar{
-display:flex;
-justify-content:center;
-margin-top:30px;
-}
-
-.scale{
-padding:20px;
-color:white;
-font-size:14px;
-width:140px;
-}
-
-.good{background:#22c55e}
-.moderate{background:#eab308}
-.sensitive{background:#f97316}
-.unhealthy{background:#ef4444}
-.very{background:#8b5cf6}
-.hazardous{background:#7f1d1d}
-
-/* HEALTH GUIDE */
-
-.health{
-text-align:center;
-padding:60px 20px;
-}
-
-.risk-container{
-display:flex;
-justify-content:center;
-gap:30px;
-margin-top:30px;
-}body{
-font-family:Inter, sans-serif;
-background:#f4f7fb;
-margin:0;
-color:#1e293b;
-}
-
-/* NAVBAR */
+/* ================= NAVBAR ================= */
 
 .navbar{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 40px;
-background:white;
-border-bottom:1px solid #e5e7eb;
+padding:18px 40px;
+background:var(--nav);
+border-bottom:1px solid var(--border);
+}
+
+/* LOGO */
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo-icon{
+width:34px;
+height:34px;
+background:linear-gradient(135deg,#3b82f6,#8b5cf6);
+border-radius:8px;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+}
+
+.logo-text h2{
+margin:0;
+font-size:18px;
+}
+
+.logo-text span{
+font-size:11px;
+color:var(--muted);
+}
+
+/* MENU */
+
+.menu{
+display:flex;
+align-items:center;
+gap:20px;
 }
 
 .menu a{
-margin-left:25px;
 text-decoration:none;
-color:#1e293b;
+color:var(--text);
 font-weight:500;
 transition:0.2s;
 }
 
 .menu a:hover{
-color:#2563eb;
+color:var(--primary);
 }
 
-/* HERO */
+/* THEME BUTTON */
+
+.theme-btn{
+width:36px;
+height:36px;
+border-radius:50%;
+background:var(--primary);
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+cursor:pointer;
+transition:0.2s;
+}
+
+.theme-btn:hover{
+transform:scale(1.1);
+}
+
+/* ================= HERO ================= */
 
 .hero{
 text-align:center;
 padding:120px 20px;
 background:linear-gradient(to bottom,#f8fafc,#eef2ff);
+}
+
+[data-theme="dark"] .hero{
+background:linear-gradient(to bottom,#020617,#0f172a);
 }
 
 .hero h1{
@@ -152,16 +131,18 @@ margin-bottom:20px;
 .hero p{
 max-width:700px;
 margin:auto;
-color:#475569;
+color:var(--muted);
 line-height:1.6;
 font-size:17px;
 }
+
+/* BUTTON */
 
 .btn{
 display:inline-block;
 margin-top:30px;
 padding:14px 32px;
-background:#2563eb;
+background:var(--primary);
 color:white;
 text-decoration:none;
 border-radius:8px;
@@ -170,11 +151,11 @@ transition:0.3s;
 }
 
 .btn:hover{
-background:#1d4ed8;
+background:var(--primary-dark);
 transform:translateY(-2px);
 }
 
-/* FEATURES */
+/* ================= FEATURES ================= */
 
 .features{
 display:flex;
@@ -186,7 +167,7 @@ margin:auto;
 }
 
 .card{
-background:white;
+background:var(--card);
 padding:30px;
 border-radius:10px;
 box-shadow:0 6px 18px rgba(0,0,0,0.05);
@@ -204,7 +185,7 @@ box-shadow:0 10px 25px rgba(0,0,0,0.08);
 margin-bottom:10px;
 }
 
-/* AQI SCALE */
+/* ================= AQI SCALE ================= */
 
 .aqi-scale{
 text-align:center;
@@ -233,7 +214,7 @@ text-align:center;
 .very{background:#8b5cf6;}
 .hazardous{background:#7f1d1d;}
 
-/* HEALTH */
+/* ================= HEALTH GUIDE ================= */
 
 .health{
 padding:80px 20px;
@@ -249,7 +230,7 @@ flex-wrap:wrap;
 }
 
 .risk{
-background:white;
+background:var(--card);
 padding:25px;
 border-radius:10px;
 box-shadow:0 6px 18px rgba(0,0,0,0.05);
@@ -260,18 +241,18 @@ width:250px;
 .medium{border-top:5px solid #f97316;}
 .high{border-top:5px solid #ef4444;}
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 
 footer{
 text-align:center;
 padding:30px;
-background:white;
-border-top:1px solid #e5e7eb;
+background:var(--nav);
+border-top:1px solid var(--border);
 margin-top:60px;
-color:#64748b;
+color:var(--muted);
 }
 
-/* MOBILE */
+/* ================= MOBILE ================= */
 
 @media(max-width:768px){
 
@@ -283,25 +264,13 @@ flex-direction:column;
 font-size:32px;
 }
 
+.navbar{
+flex-direction:column;
+gap:10px;
 }
 
-.risk{
-padding:25px;
-width:250px;
-border-radius:10px;
-color:white;
+.menu{
+gap:15px;
 }
 
-.low{background:#22c55e}
-.medium{background:#f97316}
-.high{background:#ef4444}
-
-/* FOOTER */
-
-footer{
-text-align:center;
-padding:30px;
-margin-top:50px;
-background:white;
-border-top:1px solid #e5e7eb;
 }

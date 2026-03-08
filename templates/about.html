@@ -7,18 +7,38 @@
 
 <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
 
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 
-<body>
+<body data-theme="light">
 
 <nav class="navbar">
 
+<div class="logo">
+
+<div class="logo-icon">
+<i class="fa-solid fa-wind"></i>
+</div>
+
+<div class="logo-text">
 <h2>AQI Intelligence</h2>
+<span>ML Air Monitoring</span>
+</div>
+
+</div>
 
 <div class="menu">
+
 <a href="/">Home</a>
 <a href="/predict">Predict</a>
 <a href="/about">About</a>
+
+<div class="theme-btn" id="themeToggle">
+<i class="fa-solid fa-moon" id="themeIcon"></i>
+</div>
+
 </div>
 
 </nav>
@@ -128,6 +148,47 @@ in different locations.
 <p>Air Quality Prediction System © 2026</p>
 
 </footer>
+
+
+<script>
+
+/* THEME TOGGLE */
+
+(function(){
+
+const saved = localStorage.getItem('aqi-theme');
+
+if(saved){
+document.body.setAttribute('data-theme',saved);
+}
+
+const btn=document.getElementById("themeToggle");
+const icon=document.getElementById("themeIcon");
+
+function updateIcon(){
+const dark=document.body.getAttribute("data-theme")==="dark";
+icon.className = dark ? "fa-solid fa-sun" : "fa-solid fa-moon";
+}
+
+updateIcon();
+
+btn.addEventListener("click",()=>{
+
+const current=document.body.getAttribute("data-theme");
+
+const next=current==="dark"?"light":"dark";
+
+document.body.setAttribute("data-theme",next);
+
+localStorage.setItem("aqi-theme",next);
+
+updateIcon();
+
+});
+
+})();
+
+</script>
 
 </body>
 </html>
