@@ -1,0 +1,162 @@
+body{
+font-family: 'Inter', sans-serif;
+background:#f4f7fb;
+margin:0;
+color:#1e293b;
+}
+
+/* NAVBAR */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+background:white;
+border-bottom:1px solid #e5e7eb;
+box-shadow:0 2px 6px rgba(0,0,0,0.04);
+}
+
+.navbar h2{
+margin:0;
+font-size:22px;
+font-weight:700;
+color:#2563eb;
+}
+
+.menu a{
+margin-left:25px;
+text-decoration:none;
+color:#1e293b;
+font-weight:500;
+transition:all 0.25s ease;
+}
+
+.menu a:hover{
+color:#2563eb;
+}
+
+/* HEADER */
+
+.about-header{
+text-align:center;
+padding:90px 20px 50px 20px;
+}
+
+.about-header h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.about-header p{
+max-width:700px;
+margin:auto;
+margin-top:10px;
+color:#475569;
+line-height:1.6;
+font-size:16px;
+}
+
+/* CONTAINER */
+
+.about-container{
+max-width:1000px;
+margin:auto;
+padding:40px 20px;
+display:flex;
+flex-direction:column;
+gap:30px;
+}
+
+/* CARDS */
+
+.about-card{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 6px 20px rgba(0,0,0,0.06);
+transition:all 0.25s ease;
+}
+
+.about-card:hover{
+transform:translateY(-4px);
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.about-card h2{
+margin-bottom:15px;
+font-size:22px;
+color:#1e293b;
+}
+
+.about-card p{
+line-height:1.7;
+color:#475569;
+}
+
+/* LIST */
+
+.about-card ul{
+padding-left:20px;
+line-height:1.9;
+color:#475569;
+}
+
+/* TECH GRID */
+
+.tech-grid{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+margin-top:10px;
+}
+
+.tech-grid span{
+background:#2563eb;
+color:white;
+padding:8px 14px;
+border-radius:6px;
+font-size:14px;
+font-weight:500;
+transition:all 0.2s ease;
+}
+
+.tech-grid span:hover{
+background:#1d4ed8;
+transform:scale(1.05);
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:30px;
+margin-top:40px;
+background:white;
+border-top:1px solid #e5e7eb;
+color:#64748b;
+font-size:14px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:768px){
+
+.navbar{
+flex-direction:column;
+gap:10px;
+}
+
+.menu{
+margin-top:10px;
+}
+
+.about-header h1{
+font-size:30px;
+}
+
+.about-card{
+padding:24px;
+}
+
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>AQI Intelligence</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<h2>AQI Intelligence</h2>
+
+<div class="menu">
+<a href="/">Home</a>
+<a href="/predict">Predict</a>
+<a href="/about">About</a>
+</div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h1>Air Quality Prediction System</h1>
+
+<p>
+Machine Learning powered platform that predicts Air Quality Index
+using pollution data like PM2.5, PM10, NO2 and O3.
+</p>
+
+<a href="/predict" class="btn">Start Prediction</a>
+
+</section>
+
+
+<!-- FEATURES -->
+
+<section class="features">
+
+<div class="card">
+<h3>Machine Learning</h3>
+<p>Predict AQI using trained ML model and environmental data.</p>
+</div>
+
+<div class="card">
+<h3>Live Pollution Data</h3>
+<p>Fetch real-time pollution sensor data using public APIs.</p>
+</div>
+
+<div class="card">
+<h3>Interactive Map</h3>
+<p>Visualize pollution levels geographically using map analytics.</p>
+</div>
+
+</section>
+
+
+<!-- AQI SCALE -->
+
+<section class="aqi-scale">
+
+<h2>Air Quality Index Scale</h2>
+
+<div class="scale-bar">
+
+<div class="scale good">Good<br>0-50</div>
+<div class="scale moderate">Moderate<br>51-100</div>
+<div class="scale sensitive">Sensitive<br>101-150</div>
+<div class="scale unhealthy">Unhealthy<br>151-200</div>
+<div class="scale very">Very Unhealthy<br>201-300</div>
+<div class="scale hazardous">Hazardous<br>300+</div>
+
+</div>
+
+</section>
+
+
+<!-- HEALTH METER -->
+
+<section class="health">
+
+<h2>Health Risk Guide</h2>
+
+<div class="risk-container">
+
+<div class="risk low">
+<h4>Low Risk</h4>
+<p>Air quality is satisfactory and poses little or no risk.</p>
+</div>
+
+<div class="risk medium">
+<h4>Moderate Risk</h4>
+<p>Sensitive individuals should limit prolonged outdoor activity.</p>
+</div>
+
+<div class="risk high">
+<h4>High Risk</h4>
+<p>Health effects possible. Avoid outdoor exposure when possible.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<p>Air Quality Prediction System © 2026</p>
+
+</footer>
+
+</body>
+</html>
